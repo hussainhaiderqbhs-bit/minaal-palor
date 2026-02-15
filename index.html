@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minaal Parlor | Women's Beauty Salon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #d4af37; --overlay: rgba(0, 0, 0, 0.75); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: white; background: #111; text-align: center; }
+
+        /* BRIDAL HERO - HOME PAGE */
+        header { 
+            height: 100vh; 
+            background: linear-gradient(var(--overlay), var(--overlay)), 
+                        url('https://images.unsplash.com/photo-1620331311520-246422ff82f9?q=80&w=1920') center/cover no-repeat;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+        }
+        h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 8vw, 5rem); color: var(--gold); text-transform: uppercase; }
+
+        section { padding: 80px 20px; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold); margin-bottom: 40px; border-bottom: 2px solid var(--gold); display: inline-block; }
+
+        /* CATEGORY BACKGROUNDS */
+        .facial-bg { background: linear-gradient(var(--overlay), var(--overlay)), url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1920') center/cover; }
+        .wax-bg { background: linear-gradient(var(--overlay), var(--overlay)), url('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1920') center/cover; }
+        .hair-bg { background: linear-gradient(var(--overlay), var(--overlay)), url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1920') center/cover; }
+        .makeup-bg { background: linear-gradient(var(--overlay), var(--overlay)), url('https://images.unsplash.com/photo-1457974182554-a0d0ed8bcfe9?q=80&w=1920') center/cover; }
+
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .service-card { background: rgba(0,0,0,0.85); border: 1px solid var(--gold); padding: 25px; border-radius: 15px; }
+        
+        .price-btn { background: var(--gold); color: black; border: none; padding: 12px 25px; cursor: pointer; border-radius: 30px; margin-top: 15px; font-weight: bold; }
+        .price-amount { display: none; font-size: 1.8rem; margin-top: 15px; font-weight: bold; color: #fff; }
+
+        /* CONTACT SECTION */
+        .link-container { background: #000; padding: 60px 20px; border-top: 3px solid var(--gold); }
+        .btn {
+            display: block; width: 95%; max-width: 450px; margin: 15px auto; padding: 20px;
+            text-decoration: none; color: white; font-weight: bold; border-radius: 50px; font-size: 1.2rem;
+        }
+        .insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .maps { background: #4285F4; }
+        .phone { background: #25D366; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Minaal Parlor</h1>
+        <p>Luxury Beauty Services | Malir Jaffer-e-Tyaar</p>
+    </header>
+
+    <section class="facial-bg">
+        <h2>Facial Treatment</h2>
+        <div class="service-grid">
+            <div class="service-card"><h3>C. Therapy</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 2000</div></div>
+            <div class="service-card"><h3>Pearl Whitening</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 1800</div></div>
+            <div class="service-card"><h3>Tightening Facial</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 1800</div></div>
+            <div class="service-card"><h3>Gold Facial</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 2000</div></div>
+            <div class="service-card"><h3>Janssen Facial</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 3500</div></div>
+            <div class="service-card"><h3>Skin Polish</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 1200</div></div>
+        </div>
+    </section>
+
+    <section class="wax-bg">
+        <h2>Waxing Services</h2>
+        <div class="service-grid">
+            <div class="service-card"><h3>Hand Wax (Honey)</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 400</div></div>
+            <div class="service-card"><h3>Full Hand Wax</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 500</div></div>
+            <div class="service-card"><h3>Half Leg (Honey)</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 750</div></div>
+            <div class="service-card"><h3>Full Leg (Honey)</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 900</div></div>
+            <div class="service-card"><h3>Face Wax</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 700</div></div>
+        </div>
+    </section>
+
+    <section class="hair-bg">
+        <h2>Hair Cutting</h2>
+        <div class="service-grid">
+            <div class="service-card"><h3>Hair Cut</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 800</div></div>
+            <div class="service-card"><h3>Blow-Dryer</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 1200</div></div>
+            <div class="service-card"><h3>Trimming</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 250</div></div>
+        </div>
+    </section>
+
+    <section class="makeup-bg">
+        <h2>Makeup Looks</h2>
+        <div class="service-grid">
+            <div class="service-card"><h3>Soft Party Makeup</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 2000</div></div>
+            <div class="service-card"><h3>Model Makeup</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 3500</div></div>
+            <div class="service-card"><h3>Bridal Makeup</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 18000</div></div>
+            <div class="service-card"><h3>Walima Look</h3><button class="price-btn" onclick="reveal(this)">Show Price</button><div class="price-amount">Rs. 10000</div></div>
+        </div>
+    </section>
+
+    <div class="link-container">
+        <h2 style="color:var(--gold)">Visit Us Today</h2>
+        
+        <a href="https://www.instagram.com/minaal_beauty_salon" target="_blank" class="btn insta">📸 INSTAGRAM: @minaal_beauty_salon</a>
+
+        <a href="https://www.google.com/maps/search/Malir+Jaffer-e-Tyaar+Karachi" target="_blank" class="btn maps">📍 OPEN GOOGLE MAPS LOCATION</a>
+
+        <a href="tel:+923333664876" class="btn phone">📞 CALL: +92 333 3664876</a>
+        
+        <p style="margin-top: 40px; opacity: 0.5;">Note: Exclusively for Women | Malir, Karachi</p>
+    </div>
+
+    <script>
+        function reveal(btn) {
+            var amt = btn.nextElementSibling;
+            if(amt.style.display === "block") {
+                amt.style.display = "none";
+                btn.innerHTML = "Show Price";
+            } else {
+                amt.style.display = "block";
+                btn.innerHTML = "Hide Price";
+            }
+        }
+    </script>
+</body>
+</html>
